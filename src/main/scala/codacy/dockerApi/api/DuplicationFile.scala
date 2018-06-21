@@ -8,6 +8,7 @@ case object Language extends Enumeration with JsonEnumeration {
   CoffeeScript, Rust, Swift, Haskell, React, Shell, TypeScript = Value
 
   def getExtensions(value: Value): List[String] = {
+    if(value == Javascript) println("cenas")
     value match {
       case Javascript => List(".js")
       case Scala => List(".scala")
